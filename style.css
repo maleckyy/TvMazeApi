@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+    color: rgb(28, 28, 28);
+    /* thin100 light300 reg400 bold700 */
+    margin: 0;
+    padding: 0;
+    background-color: rgb(66, 63, 62);
+}
+#search-section{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(43, 43, 43);
+    z-index: 99;
+    width: 100%;
+}
+
+#search-section input{
+    display: inline-block;
+    padding: 5px;
+    color: rgb(219, 216, 227);
+    font-size: 1.5rem;
+    /* border-radius: 10px; */
+
+    
+    /* background-color: rgb(66, 63, 62); */
+    /* border: 1px solid #42484f; */
+    border: none;
+    border-bottom: 2px solid rgb(66, 63, 62);
+
+
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    outline: none;
+}
+#search-section input:active ,#search-section input:focus, #search-section input:hover{
+    /* border: 1px solid #42484f; */
+    outline: none;
+    border-bottom: 2px solid rgb(180, 180, 180);
+    transition: 0.2s;
+    color: rgb(219, 216, 227);
+    
+}
+.shows-data-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.show-box{
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    width: 320px;
+    color: rgba(255, 255, 255, 0.818);
+    background-color: rgb(43, 43, 43);
+    font-size: 1.3rem;
+    border-radius: 7px;
+
+}
+.show-box img{
+    width: 100%;
+    border-radius: 3px;
+}
+.show-box div{
+    margin:4px;
+}
+.show-box .show-title{
+    font-weight: 400;
+
+}
+.show-box div.show-gens{
+    color:rgba(143, 143, 143, 0.818) ;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.show-overview{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: rgb(43, 43, 43);
+    opacity: 0;
+    transition: 0.2s;
+    overflow-y: scroll;
+    font-size: 0.9rem;
+}
+.show-overview:hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: black grey;
+}
+*::-webkit-scrollbar{
+    width: 12px;
+}
+*::-webkit-scrollbar-track{
+    background-color: #323538;
+    border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(24, 24, 24);
+    border-radius: 20px;
+}
+#tv-maze-info {
+    color: rgba(255, 255, 255, 0.818);
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+
+    /* background-color: aqua; */
+    /* position: fixed;
+    bottom: 0;
+     */
+
+    
+}
+#tv-maze-info a{
+    color: rgba(255, 255, 255, 0.415);
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
