@@ -12,42 +12,60 @@ body{
 #search-section{
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 1rem;
     background-color: rgb(43, 43, 43);
     z-index: 99;
     width: 100%;
 }
-
 #search-section input{
     display: inline-block;
     padding: 5px;
     color: rgb(219, 216, 227);
     font-size: 1.5rem;
-    /* border-radius: 10px; */
-
-    
-    /* background-color: rgb(66, 63, 62); */
-    /* border: 1px solid #42484f; */
     border: none;
-    border-bottom: 2px solid rgb(66, 63, 62);
-
-
+    border-bottom: 2px solid #0a90ab52;
+    transition: 0.2s;
     background-color: rgb(43, 43, 43);
     text-align: center;
     outline: none;
 }
 #search-section input:active ,#search-section input:focus, #search-section input:hover{
-    /* border: 1px solid #42484f; */
     outline: none;
-    border-bottom: 2px solid rgb(180, 180, 180);
-    transition: 0.2s;
+    border-bottom-color: #0A91AB;
     color: rgb(219, 216, 227);
+    transform: scale(1.17);
+    transition: 0.2s;
+}
+.empty-section{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.empty-section p{
+    color: rgba(219, 216, 227, 0.278);
+    text-align: center;
+    font-size: 2rem;
     
+}
+#emptyImg{
+
+    width: 70%;
+    height: auto;
+    background-color: none;
+    margin: 100px auto 10px auto;
+    opacity: 0.6;
+
+
 }
 .shows-data-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 80%;
+    margin: 10px auto 60px ;
+    gap: 10px;
+
 }
 .show-box{
     position: relative;
@@ -58,7 +76,6 @@ body{
     background-color: rgb(43, 43, 43);
     font-size: 1.3rem;
     border-radius: 7px;
-
 }
 .show-box img{
     width: 100%;
@@ -69,7 +86,6 @@ body{
 }
 .show-box .show-title{
     font-weight: 400;
-
 }
 .show-box div.show-gens{
     color:rgba(143, 143, 143, 0.818) ;
@@ -88,42 +104,44 @@ body{
     transition: 0.2s;
     overflow-y: scroll;
     font-size: 0.9rem;
+    border-radius: 7px;
 }
 .show-overview:hover{
     opacity: 1;
     transition: 0.2s;
 }
-*{
-    scrollbar-width: thin;
-    scrollbar-color: black grey;
-}
 *::-webkit-scrollbar{
-    width: 12px;
+    width: 9px;
 }
 *::-webkit-scrollbar-track{
     background-color: #323538;
     border-radius: 20px;
 }
 *::-webkit-scrollbar-thumb{
-    background-color: rgb(24, 24, 24);
+    background-color: rgba(150, 149, 149, 0.415);
     border-radius: 20px;
-}
+} 
 #tv-maze-info {
     color: rgba(255, 255, 255, 0.818);
     padding: 10px;
-    text-align: right;
+    text-align: center;
     width: 100%;
-
-    /* background-color: aqua; */
-    /* position: fixed;
-    bottom: 0;
-     */
-
-    
 }
 #tv-maze-info a{
     color: rgba(255, 255, 255, 0.415);
-    /* position: absolute;
-    top: 0;
-    left: 0; */
+    transition: 0.2s;
+}
+#tv-maze-info a:hover{
+    color: #0A91AB;
+    transition: 0.2s;
+}
+main{
+    position: relative;
+}
+footer{
+    background-color: rgb(43, 43, 43);
+    position:fixed;
+    width: 100%;
+    bottom: 0px;
+
 }

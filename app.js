@@ -21,7 +21,7 @@ let showsApp = {
             }
         });
         this.showsDataSection = document.querySelector('.shows-data-section')
-        this.loadData('friends');
+        //  this.loadData('friends');
     },
     loadData: function(str){
         fetch('https://api.tvmaze.com/search/shows?q='+str.trim())
@@ -31,9 +31,27 @@ let showsApp = {
     },
     dataReady: function(showData){
         this.data = showData;
+
         let allBoxesHtml = "";
+
+        if(showData.length == 0){
+
+            allBoxesHtml = `       
+            <div class="empty-section">
+                <img id="emptyImg" src="https://cdn.pixabay.com/photo/2016/02/01/18/59/filmstrip-1174228_960_720.png" alt="">
+                <p class="emptyInfo">I cant find anything... sorry ;(</p>
+            </div>
+            `
+        }
+
+
+
+
         // console.log(showData)//lista wyszukanych seriali
         for(let i = 0; i < showData.length; i++){
+
+
+
             let show = showData[i];
             // let score = show.score;
             show = show.show;
@@ -86,6 +104,10 @@ let showsApp = {
     },
     //generowanie kafelkow
     getShowBoxByTemplate: function(imgSrc, title , genres, overview){
+
+
+
+
         return `
         <div class="show-box">
             <img src="${imgSrc}" alt="">
