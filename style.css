@@ -29,6 +29,9 @@ body{
     text-align: center;
     outline: none;
 }
+#search-section input::placeholder{
+    color:#0a90ab2f;
+}
 #search-section input:active ,#search-section input:focus, #search-section input:hover{
     outline: none;
     border-bottom-color: #0A91AB;
@@ -37,7 +40,6 @@ body{
     transition: 0.2s;
 }
 .empty-section{
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,17 +48,13 @@ body{
     color: rgba(219, 216, 227, 0.278);
     text-align: center;
     font-size: 2rem;
-    
 }
 #emptyImg{
-
     width: 70%;
     height: auto;
     background-color: none;
     margin: 100px auto 10px auto;
     opacity: 0.6;
-
-
 }
 .shows-data-section{
     display: flex;
@@ -65,7 +63,6 @@ body{
     width: 80%;
     margin: 10px auto 60px ;
     gap: 10px;
-
 }
 .show-box{
     position: relative;
@@ -143,5 +140,4 @@ footer{
     position:fixed;
     width: 100%;
     bottom: 0px;
-
 }
