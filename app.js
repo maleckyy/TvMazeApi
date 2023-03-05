@@ -12,7 +12,6 @@ let showsApp = {
     init: function(){
         this.searchInput = document.getElementById('search-input')
         this.searchInput.addEventListener('keyup',(e)=>{
-            //add event do przycisku 13 czyli enter, powoduje uruchomienie loadData, które wyszukuje a api wpisaną fraze
             if(e.keyCode == '13'){
                 this.loadData(this.searchInput.value);
             }
@@ -20,7 +19,6 @@ let showsApp = {
         this.showsDataSection = document.querySelector('.shows-data-section')
     },
 
-    //fetch do api plus wpisana fraza z usunieciem spacji
     loadData: function(str){
         fetch('https://api.tvmaze.com/search/shows?q='+str.trim())
         .then(response => response.json())
@@ -34,7 +32,6 @@ let showsApp = {
 
         if(showData.length == 0){
 
-            //if który wyswietla taśme i napis o braku seriali z wpisaną frazą
             allBoxesHtml = `       
             <div class="empty-section">
                 <img id="emptyImg" src="https://cdn.pixabay.com/photo/2016/02/01/18/59/filmstrip-1174228_960_720.png" alt="">
@@ -47,14 +44,13 @@ let showsApp = {
 
             let show = showData[i];
             show = show.show;
-            let genres = show.genres.join(', ')//połączenie wszystkich gatunków z dodaniem przecinka
+            let genres = show.genres.join(', ')
             let imgSrc = null;
             let imgSrcOriginal = null;
             if (show.image){
                 imgSrc = show.image.medium;
                 imgSrcOriginal = show.image.original;
             }else{
-                //ustawienie domyślnego zdjęcia na wypadek braku w api
                 imgSrc = 'https://cdn.pixabay.com/photo/2016/06/02/16/14/cassette-1431397_960_720.png'
                 imgSrcOriginal ='https://cdn.pixabay.com/photo/2016/06/02/16/14/cassette-1431397_960_720.png'
             }
@@ -79,7 +75,6 @@ let showsApp = {
                 premiered = show.premiered
             }
             
-            //zbiór informacji o danym serialu
             let summary = show.summary;
             summary = `
             <p>Show: ${showTitle} </p>
@@ -93,7 +88,6 @@ let showsApp = {
         }
         this.showsDataSection.innerHTML = allBoxesHtml;
     },
-    //generowanie kafelkow dla znalezionego serialu
     getShowBoxByTemplate: function(imgSrc, title , genres, overview){
 
         return `
